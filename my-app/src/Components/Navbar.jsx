@@ -55,10 +55,10 @@ import {
           <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
             
 
-            <Img src="https://www.fitpro.com/fitpro_live/images/fitpro_logo.jpg"
-             w={20}
-             variant={'link'}
-             href= {'/'}/>
+            <Box variant={'link'} as={'a'} href= {'/'}>
+            <Img src="https://www.i2mediagroup.com/wp-content/uploads/2021/05/fitpro-logo.png"
+             w={20}/>
+              </Box>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -72,22 +72,30 @@ import {
             spacing={6}>
             <Button
               as={'a'}
-              fontSize={'sm'}
-              fontWeight={400}
+              fontSize={'20px'}
+              fontWeight={500}
               variant={'link'}
-              href={'/login'}>
+              href={'/login'}
+              color='white'
+              >
               Login
+              
             </Button>
             <Button
+            as={'a'}
               display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'pink.400'}
+            
+    
+              color={'blue'}
+              bg={'white'}
+              fontSize={'18px'}
+              fontWeight={500}
               href={'/signup'}
               _hover={{
-                bg: 'pink.300',
+                bg: 'blue',
+                color:'white'
               }}>
+
               Sign Up
             </Button>
           </Stack>
@@ -101,20 +109,20 @@ import {
   }
   
   const DesktopNav = () => {
-    const linkColor = useColorModeValue('gray.600', 'gray.200');
+    const linkColor = useColorModeValue('white', 'gray.200');
     const linkHoverColor = useColorModeValue('gray.800', 'white');
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
   
     return (
-      <Stack direction={'row'} spacing={4}>
+      <Stack direction={'row'} spacing={10}>
         {NAV_ITEMS.map((navItem) => (
-          <Box key={navItem.label}>
+          <Box key={navItem.label} >
             <Popover trigger={'hover'} placement={'bottom-start'}>
               <PopoverTrigger>
                 <Link
                   p={2}
                   href={navItem.href ?? '#'}
-                  fontSize={'sm'}
+                  fontSize={'20px'}
                   fontWeight={500}
                   color={linkColor}
                   _hover={{
@@ -257,14 +265,15 @@ import {
       
       children: [
         {
+          
           label: 'Workout App (ios)',
         
-          href: '#',
+          href: 'https://apps.apple.com/app/apple-store/id449810000',
         },
         {
             label: 'Workout App (Android)',
        
-          href: '/plans',
+          href: 'https://play.google.com/store/apps/details?id=je.fit&referrer=utm_source%3Demail',
         },
       ],
     },
