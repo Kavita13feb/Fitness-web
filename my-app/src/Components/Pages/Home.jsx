@@ -122,7 +122,7 @@ setData(gymdata)
   <Text fontWeight={"bold"} fontSize={'40px'}>
   CONNECT WITH OVER 10 MILLION JEFIT MEMBERS
   </Text>
-  <Text fontSize={'20px'} fontWeight={'600'} marginTop={4} marginBottom='20px'>
+  <Text fontSize={'25px'} fontWeight={'600'} marginTop={4} marginBottom='20px'>
   As the most active workout community, we invite you and your friends to join us and support each other.
 
   </Text>
@@ -145,7 +145,7 @@ setData(gymdata)
       
 
 </Box>
-<Box marginTop='20px'>
+<Box marginTop='30px'>
 <Stack direction='row' spacing={4} align='center' justifyContent={'center'}>
 
 <Button colorScheme='teal' variant='outline' bg={'#39B7FF'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} 
@@ -159,19 +159,20 @@ setData(gymdata)
 </Stack>
 </Box>
 
-<Heading>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
+<Heading marginTop={'30px'} marginBottom={'80px'}>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
 
-<Box border={'1px solid red '} w='90%' margin={'auto'}>
+<Box border={'1px solid red '} w='90%' margin={'auto'} h='600px'>
   <Flex >
-    <Box border={'1px solid red '} w='40%'>
+    <Box border={'1px solid red '} w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web1-1536x1536.png' 
       w='100%'
       />
     </Box>
-    <Box border={'1px solid red '} w='50%'>
-      <Heading fontSize={'20px'} color='teal'>WORKOUT TRACKING</Heading>
-      <Heading>PERSONALIZE YOUR WORKOUT PLANS</Heading>
-    <List spacing={3}>
+    <Box border={'1px solid red '} w='50%' >
+      <Heading fontSize={'20px'} color='teal'marginTop={'30px'}>WORKOUT TRACKING</Heading>
+      <Heading marginTop={'30px'}>PERSONALIZE YOUR </Heading>
+      <Heading> WORKOUT PLANS</Heading>
+    <List spacing={3} marginTop={'30px'}>
   <ListItem>
     <ListIcon  color='green.500' />
     Lorem ipsum dolor sit amet, consectetur adipisicing elit
@@ -186,12 +187,12 @@ setData(gymdata)
   </ListItem>
   {/* You can also use custom icons from react-icons */}
   <ListItem>
-    <ListIcon color='green.500' />
+    <ListIcon color='green.500' justifyContent={'space-evenly'} />
     Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
   </ListItem>
 </List>
 
-  <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
+  <Button marginTop={'30px'} colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
     Join Now
   </Button>
     </Box>
