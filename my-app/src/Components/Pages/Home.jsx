@@ -164,9 +164,10 @@ setData(gymdata)
 </Stack>
 </Box>
 
-<Heading marginTop={'30px'} marginBottom={'80px'}>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
 
-<Box w='90%' margin={'auto'} h='600px'>
+
+<Box w='100%' padding={'100px 10px 150px 10px'} h='600px' bg='#F8FBFE'>
+  <Heading marginTop={'30px'} marginBottom={'80px'}>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
   <Flex >
     <Box w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web1-1536x1536.png' 
@@ -221,10 +222,10 @@ setData(gymdata)
 
 
 
-<Box w='90%' margin={'auto'} marginTop='220px'>
+<Box w='100%' padding={'200px 10px 10px 10px'} bg='#F8FBFE'>
   <Flex gap={'10%'}>
    
-    <Box  w='40%' marginTop='60px'>
+    <Box  w='40%' marginTop='80px'>
       <Heading fontSize={'20px'} color='teal'>SMART WATCH INTEGRATION</Heading>
       <Heading  marginTop='30px' >TRAIN & LOG SEAMLESSLY IN GYM AND HOME</Heading>
       <List spacing={3} marginTop={'80px'} marginBottom={'50px'}>
@@ -276,7 +277,7 @@ Audio and video instructions
 
 
 
-<Box w='90%' margin={'auto'} marginTop='200px'>
+<Box  w='100%' padding={'100px 10px 100px 10px'} bg='#F8FBFE'>
   <Flex gap={'5%'} >
     <Box w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web3-1536x1536.png' 
@@ -337,8 +338,8 @@ Audio and video instructions
 <Box w='80%' margin={'auto'} marginTop='80px'>
 
 <Grid templateColumns='repeat(3, 1fr)' gap={6}>
-  <GridItem w='100%' h='650px' bg='#404040' borderRadius={'10px'} paddingTop='100px' >
-    <Button padding={'30px 20px 30px 20px'} borderRadius={'29px'} >
+  <GridItem w='100%' h='750px' bg='#404040' borderRadius={'10px'} padding='100px 10px 50px 10px'>
+    <Button padding={'30px 20px 30px 20px'} borderRadius={'29px'} marginTop='35px'>
     <BsFillStarFill  fontSize={'25px'} />
       </Button>  
  
@@ -369,7 +370,7 @@ _groupHover={{
     Free Download
   </Button>
   </GridItem>
-  <GridItem w='100%' h='650px' bg='#404040'borderRadius={'10px'} paddingTop='100px'>
+  <GridItem w='100%' h='750px' bg='#404040'borderRadius={'10px'} padding='100px 10px 50px 10px'>
  
   <Button padding={'30px 20px 30px 20px'} borderRadius={'30px'} marginTop="35px">
   <GiSevenPointedStar fontSize={'25px'} />
@@ -390,11 +391,12 @@ Exercise tips from JEFIT experts
 Premium workout plans
 More...</Container>
 
-<Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
-  Join Now
+<Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 60px 0px 60px'} fontSize={'25px'} >
+LEARN MORE
 </Button>
+<Container fontSize ='20px' marginTop='20px'>$12.99 billed / month</Container>
   </GridItem>
-  <GridItem w='100%' h='650' bg='#404040' borderRadius={'10px'} paddingTop='100px'>
+  <GridItem w='100%' h='750' bg='#404040' borderRadius={'10px'} padding='100px 10px 50px 10px'>
   <Button padding={'30px 20px 30px 20px'} borderRadius={'29px'} marginTop="35px" ><FaCrown fontSize={'24px'}/></Button>
   <Heading color={'white'}   marginTop="35px">Elite
 Yearly</Heading>
@@ -411,8 +413,9 @@ Premium workout plan
 More...</Container>
 
 <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
-  Join Now
+  LEARN MORE
 </Button>
+<Container fontSize ='20px'marginTop='20px'>Save 55%, $69.99 billed / year</Container>
   </GridItem>
   
 
