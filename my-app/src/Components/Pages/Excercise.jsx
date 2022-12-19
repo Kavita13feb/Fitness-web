@@ -52,7 +52,7 @@ useEffect(()=>{
 // },[])
 
 const getdata=async()=>{
-    let res =await fetch(`http://localhost:8080/posts?category=begainner&_page=${c0}`)
+    let res =await fetch(`http://localhost:8080/posts?category=home&_page=${c0}`)
     
         let gymdata =await res.json()
         console.log(gymdata)

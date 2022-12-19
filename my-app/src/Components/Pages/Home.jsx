@@ -6,6 +6,8 @@ import { Button, ButtonGroup  ,Heading} from '@chakra-ui/react'
 import {CheckIcon} from '@chakra-ui/icons'
 import { Grid, GridItem } from '@chakra-ui/react'
 import {BsFillStarFill} from  'react-icons/bs';
+import { useState } from "react"
+import { useEffect } from "react"
 import{FaCrown,FaStarOfLife} from 'react-icons/fa'
 import {
   List,
@@ -20,6 +22,24 @@ import {
 import { brands } from '@fortawesome/fontawesome-svg-core'
 // import {MdCheckCircle} from "@chakra-ui/icons"
 export default function Home (){
+
+  const [data,setData]=useState([])
+  
+let c0=1
+useEffect(()=>{
+    getdata()
+},[])
+
+const getdata=async()=>{
+  let res =await fetch(`http://localhost:8080/posts?category=begainner&_page=${c0}`)
+  
+      let gymdata =await res.json()
+      console.log(gymdata)
+      // let home_decore_div =document.querySelector(".swiper-wrapper");
+      // let fast_div= document.querySelector(".fast_container")
+setData(gymdata)
+  }
+
     return (
         <div>
           {/* <h1>HomePage</h1>  */}
