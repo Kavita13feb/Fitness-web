@@ -4,13 +4,18 @@ import { Container , VStack} from '@chakra-ui/react'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import { Button, ButtonGroup  ,Heading} from '@chakra-ui/react'
 import {CheckIcon} from '@chakra-ui/icons'
+import { Card, CardHeader, CardBody, CardFooter ,SimpleGrid} from '@chakra-ui/react'
 import { Grid, GridItem } from '@chakra-ui/react'
+
 import {BsFillStarFill} from  'react-icons/bs';
 import { useState } from "react"
 import { useEffect } from "react"
 import{FaCrown,FaStarOfLife,FaInstagram,FaFacebook,FaTwitter} from 'react-icons/fa'
+import {GiSevenPointedStar} from 'react-icons/gi'
 import Slider from "react-slick";
 import React, { Component } from "react";
+import {AiFillCheckCircle} from 'react-icons/ai'
+import {Link} from 'react-router-dom'
 import {
   List,
   ListItem,
@@ -161,38 +166,50 @@ setData(gymdata)
 
 <Heading marginTop={'30px'} marginBottom={'80px'}>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
 
-<Box border={'1px solid red '} w='90%' margin={'auto'} h='600px'>
+<Box w='90%' margin={'auto'} h='600px'>
   <Flex >
-    <Box border={'1px solid red '} w='50%'>
+    <Box w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web1-1536x1536.png' 
       w='100%'
       />
     </Box>
-    <Box border={'1px solid red '} w='50%' >
+    <Box w='50%' >
       <Heading fontSize={'20px'} color='teal'marginTop={'30px'}>WORKOUT TRACKING</Heading>
-      <Heading marginTop={'30px'}>PERSONALIZE YOUR </Heading>
-      <Heading> WORKOUT PLANS</Heading>
-    <List spacing={3} marginTop={'30px'}>
-  <ListItem>
-    <ListIcon  color='green.500' />
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+      <Heading size={'xl'} marginTop={'30px'}>PERSONALIZE YOUR </Heading>
+      <Heading size={'xl'} marginTop={'4px'}> WORKOUT PLANS</Heading>
+    <List spacing={3} marginTop={'70px'} marginBottom={'50px'}>
+  <ListItem fontSize={'20px'} w={'60%'}  margin='auto'>
+  <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+  <AiFillCheckCircle color='blue' fontSize={'20px'}/>
+    1400+ exercises with instructions
+  </Flex>
+  
   </ListItem>
-  <ListItem>
-    <ListIcon  color='green.500' />
-    Assumenda, quia temporibus eveniet a libero incidunt suscipit
+  <ListItem w={'60%'} margin='auto' fontSize={'20px'} fontWeight='400'>
+  <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+  <AiFillCheckCircle color='blue'fontSize={'20px'} />
+    Pro-designed workout plans
+  </Flex>
+ 
   </ListItem>
-  <ListItem>
-    <CheckIcon/><ListIcon  color='green.500' />
-    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-  </ListItem>
+  <ListItem  w={'60%'} margin='auto' fontSize={'20px'}>
+    <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+    <AiFillCheckCircle color='blue' fontSize={'20px'}/>
+    Support custom exercises
+    </Flex>
+ 
+  </ListItem  >
   {/* You can also use custom icons from react-icons */}
-  <ListItem>
-    <ListIcon color='green.500' justifyContent={'space-evenly'} />
-    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+  <ListItem w={'60%'} margin='auto' fontSize={'20px'}>
+  <Flex justifyContent={'space-between'} alignItems='center' >
+  <AiFillCheckCircle color='blue' fontSize={'20px'} />
+    Flexible workout planning tool
+  </Flex>
+ 
   </ListItem>
 </List>
 
-  <Button marginTop={'30px'} colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
+  <Button  colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
     Join Now
   </Button>
     </Box>
@@ -202,39 +219,52 @@ setData(gymdata)
 
 {/* 2 */}
 
-<Heading>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
 
-<Box border={'1px solid red '} w='90%' margin={'auto'}>
-  <Flex >
+
+<Box w='90%' margin={'auto'} marginTop='220px'>
+  <Flex gap={'10%'}>
    
-    <Box border={'1px solid red '} w='50%'>
-      <Heading fontSize={'20px'} color='teal'>WORKOUT TRACKING</Heading>
-      <Heading>PERSONALIZE YOUR WORKOUT PLANS</Heading>
-    <List spacing={3}>
-  <ListItem>
-    <ListIcon  color='green.500' />
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    <Box  w='40%' marginTop='60px'>
+      <Heading fontSize={'20px'} color='teal'>SMART WATCH INTEGRATION</Heading>
+      <Heading  marginTop='30px' >TRAIN & LOG SEAMLESSLY IN GYM AND HOME</Heading>
+      <List spacing={3} marginTop={'80px'} marginBottom={'50px'}>
+  <ListItem fontSize={'20px'} w={'60%'}  margin='auto'>
+  <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+  <AiFillCheckCircle color='blue' fontSize={'20px'}/>
+  Log training with one-click
+  </Flex>
+  
   </ListItem>
-  <ListItem>
-    <ListIcon  color='green.500' />
-    Assumenda, quia temporibus eveniet a libero incidunt suscipit
+  <ListItem w={'60%'} margin='auto' fontSize={'20px'} fontWeight='400'>
+  <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+  <AiFillCheckCircle color='blue'fontSize={'20px'} />
+  Control rest time easily
+  </Flex>
+ 
   </ListItem>
-  <ListItem>
-    <CheckIcon/><ListIcon  color='green.500' />
-    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-  </ListItem>
+  <ListItem  w={'60%'} margin='auto' fontSize={'20px'}>
+    <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+    <AiFillCheckCircle color='blue' fontSize={'20px'}/>
+    Available on mobile and watch
+    </Flex>
+ 
+  </ListItem  >
   {/* You can also use custom icons from react-icons */}
-  <ListItem>
-    <ListIcon color='green.500' />
-    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+  <ListItem w={'60%'} margin='auto' fontSize={'20px'}>
+  <Flex justifyContent={'space-between'} alignItems='center' >
+  <AiFillCheckCircle color='blue' fontSize={'20px'} />
+  
+Audio and video instructions
+  </Flex>
+ 
   </ListItem>
 </List>
 
-  <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
+  <Button  colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
     Join Now
   </Button>
     </Box>
-    <Box border={'1px solid red '} w='50%'>
+    <Box  w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web2-1536x1536.png' 
       
       />
@@ -244,39 +274,52 @@ setData(gymdata)
 
 {/* 3 */}
 
-<Heading>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
 
-<Box border={'1px solid red '} w='90%' margin={'auto'}>
-  <Flex >
-    <Box border={'1px solid red '} w='50%'>
+
+<Box w='90%' margin={'auto'} marginTop='200px'>
+  <Flex gap={'5%'} >
+    <Box w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web3-1536x1536.png' 
       w='80%'
       />
     </Box>
-    <Box border={'1px solid red '} w='50%'>
-      <Heading fontSize={'20px'} color='teal'>WORKOUT TRACKING</Heading>
-      <Heading>PERSONALIZE YOUR WORKOUT PLANS</Heading>
-    <List spacing={3}>
-  <ListItem>
-    <ListIcon  color='green.500' />
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit
+    <Box  w='45%'>
+      <Heading fontSize={'20px'} color='teal' marginTop='80px'>WORKOUT TRACKING</Heading>
+      <Heading marginTop='40px'>PERSONALIZE YOUR WORKOUT PLANS</Heading>
+      <List spacing={3} marginTop={'80px'} marginBottom={'50px'}>
+  <ListItem fontSize={'20px'} w={'60%'}  margin='auto'>
+  <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+  <AiFillCheckCircle color='blue' fontSize={'20px'}/>
+  Log training with one-click
+  </Flex>
+  
   </ListItem>
-  <ListItem>
-    <ListIcon  color='green.500' />
-    Assumenda, quia temporibus eveniet a libero incidunt suscipit
+  <ListItem w={'60%'} margin='auto' fontSize={'20px'} fontWeight='400'>
+  <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+  <AiFillCheckCircle color='blue'fontSize={'20px'} />
+  Control rest time easily
+  </Flex>
+ 
   </ListItem>
-  <ListItem>
-    <CheckIcon/><ListIcon  color='green.500' />
-    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
-  </ListItem>
+  <ListItem  w={'60%'} margin='auto' fontSize={'20px'}>
+    <Flex justifyContent={'space-between'} alignItems='center' gap={6}>
+    <AiFillCheckCircle color='blue' fontSize={'20px'}/>
+    Available on mobile and watch
+    </Flex>
+ 
+  </ListItem  >
   {/* You can also use custom icons from react-icons */}
-  <ListItem>
-    <ListIcon color='green.500' />
-    Quidem, ipsam illum quis sed voluptatum quae eum fugit earum
+  <ListItem w={'60%'} margin='auto' fontSize={'20px'}>
+  <Flex justifyContent={'space-between'} alignItems='center' >
+  <AiFillCheckCircle color='blue' fontSize={'20px'} />
+  
+Audio and video instructions
+  </Flex>
+ 
   </ListItem>
 </List>
 
-  <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
+  <Button  colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
     Join Now
   </Button>
     </Box>
@@ -287,31 +330,55 @@ setData(gymdata)
 
 {/* cards */}
 
-<Heading>PLANS THAT SUIT YOU BEST</Heading>
+<Heading marginTop='110px'>PLANS THAT SUIT YOU BEST</Heading>
 
-<Box w='90%' margin={'auto'}>
+
+
+<Box w='80%' margin={'auto'} marginTop='80px'>
+
 <Grid templateColumns='repeat(3, 1fr)' gap={6}>
-  <GridItem w='100%' h='600px' bg='blue.500' ><BsFillStarFill/>
-  <Heading>FREE</Heading>
+  <GridItem w='100%' h='650px' bg='#404040' borderRadius={'10px'} paddingTop='100px' >
+    <Button padding={'30px 20px 30px 20px'} borderRadius={'29px'} >
+    <BsFillStarFill  fontSize={'25px'} />
+      </Button>  
+ 
+  <Heading color={'white'}  marginTop="35px">
+ 
 
-  <Text>Basic
-  <br></br>
+    FREE
+
+  </Heading>
+
+  <Container color={'white'} marginTop="35px"  lineHeight='35px' fontSize={'24px'} marginBottom="3 0px">Basic
+  <br  marginTop="35px" ></br>
 Ads supported
 Flexible workout planner
 Top-notch log tracker
 1400+ exercises library
 Body stats tracking tools
-Support interval training</Text>
+Support interval training</Container>
 
-<Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
-    Join Now
+<Button colorScheme='black' variant='outline' bg={'#404040'  } borderRadius='20px' p={'0px 70px 0px 70px'} 
+fontSize={'25px'} 
+borderColor="white"
+color={'white'}
+_groupHover={{
+  bg:'white',
+  color:'blue'
+}}>
+    Free Download
   </Button>
   </GridItem>
-  <GridItem w='100%' h='600px' bg='blue.500' ><FaStarOfLife/>
-  <Heading>Elite
+  <GridItem w='100%' h='650px' bg='#404040'borderRadius={'10px'} paddingTop='100px'>
+ 
+  <Button padding={'30px 20px 30px 20px'} borderRadius={'30px'} marginTop="35px">
+  <GiSevenPointedStar fontSize={'25px'} />
+    </Button> 
+
+  <Heading color={'white'}   marginTop="35px">Elite
 Monthly</Heading>
 
-<Text>
+<Container color={'white'} lineHeight='35px' fontSize={'24px'}  marginTop="35px" >
   $12.99/month
   <br></br>
 All BASIC plan features
@@ -321,17 +388,18 @@ Advanced tracking features
 Compare records with friends
 Exercise tips from JEFIT experts
 Premium workout plans
-More...</Text>
+More...</Container>
 
 <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
   Join Now
 </Button>
   </GridItem>
-  <GridItem w='100%' h='600' bg='blue.500' ><FaCrown/>
-  <Heading>Elite
+  <GridItem w='100%' h='650' bg='#404040' borderRadius={'10px'} paddingTop='100px'>
+  <Button padding={'30px 20px 30px 20px'} borderRadius={'29px'} marginTop="35px" ><FaCrown fontSize={'24px'}/></Button>
+  <Heading color={'white'}   marginTop="35px">Elite
 Yearly</Heading>
 
-<Text color={'white'}>$5.83/month
+<Container lineHeight={'35px'} color={'white'} fontSize='24px'   marginTop="35px">$5.83/month
 <br></br>
 All BASIC plan features
 No ads
@@ -339,19 +407,20 @@ Comprehensive training reports
 Advanced tracking features
 Compare records with friends
 Exercise tips from JEFIT experts
-Premium workout plans
-More...</Text>
+Premium workout plan
+More...</Container>
 
 <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
   Join Now
 </Button>
   </GridItem>
+  
 
 </Grid>
 </Box>
-<Box>
-  <Heading>WANT TO BUILD YOUR OWN WORKOUT PLAN?</Heading>
-  <Heading>Customize your workout plan with over 1400 free exercises in Jefit Workout Plan Builder. And easily share with friends.
+<Box marginTop={'90px'} w='100%' bg='#F8FBFE' padding={'15px 10px 80px 15px '} >
+  <Heading marginTop={'90px'}>WANT TO BUILD YOUR OWN WORKOUT PLAN?</Heading>
+  <Heading marginTop={'30px'} marginBottom={'30px'} fontSize='2xl'>Customize your workout plan with over 1400 free exercises in Jefit Workout Plan Builder. And easily share with friends.
 </Heading>
 
 <Button colorScheme='teal' variant='outline' bg={'teal.300'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} >
@@ -361,50 +430,51 @@ More...</Text>
 
 {/* footer */}
 
-<Box>
-<Grid templateColumns='repeat(5, 1fr)' gap={6}>
+<Box bg='pink.50' paddingTop='60px' >
+<Grid w='90%' margin={'auto'} templateColumns='repeat(4, 1fr)' gap={6}>
   <GridItem w='100%'  >
-    <Heading>Products</Heading>
-    <UnorderedList>
-  <ListItem>Lorem ipsum dolor sit amet</ListItem>
-  <ListItem>Consectetur adipiscing elit</ListItem>
-  <ListItem>Integer molestie lorem at massa</ListItem>
-  <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-</UnorderedList>
+    <Heading fontSize={'25px'} marginBottom='30px'>Products</Heading>
+    <List>
+  <ListItem >Elite Membership</ListItem>
+  <ListItem >Coach</ListItem>
+  <ListItem >Signup</ListItem>
+  <ListItem >Login</ListItem>
+</List>
   </GridItem>
   <GridItem w='100%'  >
 
-  <Heading>Products</Heading>
-    <UnorderedList>
-  <ListItem>Lorem ipsum dolor sit amet</ListItem>
-  <ListItem>Consectetur adipiscing elit</ListItem>
-  <ListItem>Integer molestie lorem at massa</ListItem>
-  <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-</UnorderedList>
+  <Heading fontSize={'25px'} marginBottom='20px'>Resource</Heading>
+    <List>
+  <ListItem >Workout</ListItem>
+  <ListItem >Execrcise Database</ListItem>
+  <ListItem >Community</ListItem>
+  <ListItem >Help Center</ListItem>
+</List>
   </GridItem>
   <GridItem w='100%'  >
-    <Heading>Products</Heading>
-    <UnorderedList>
-  <ListItem>Lorem ipsum dolor sit amet</ListItem>
-  <ListItem>Consectetur adipiscing elit</ListItem>
-  <ListItem>Integer molestie lorem at massa</ListItem>
-  <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-</UnorderedList>
+    <Heading fontSize={'25px'}  marginBottom='30px'>Legal</Heading>
+    <List >
+  <ListItem >Privacy Policy</ListItem>
+  <ListItem >Terms of use</ListItem>
+  <ListItem>Ip /DMCA  Notices</ListItem>
+  <ListItem>Press and Media</ListItem>
+</List>
   </GridItem>
   <GridItem w='100%'  >
-    <Heading>Products</Heading>
-    <UnorderedList>
-  <ListItem>Lorem ipsum dolor sit amet</ListItem>
-  <ListItem>Consectetur adipiscing elit</ListItem>
-  <ListItem>Integer molestie lorem at massa</ListItem>
-  <ListItem>Facilisis in pretium nisl aliquet</ListItem>
-</UnorderedList>
+    <Heading fontSize={'25px'}  marginBottom='30px'>Follow us</Heading>
+    <List>
+  <ListItem >  <a href="#">Blog</a></ListItem>
+  <ListItem > <a href=''>Facebook</a></ListItem>
+  <ListItem > <a href=''>Instagram</a></ListItem>
+  <ListItem > <a href=''>Twitter</a></ListItem>
+</List>
   </GridItem>
 </Grid>
 
-Copyright © 2010 - 2022 Jefit, Inc.
-All Rights Reserved.
 
+
+<Text marginTop='60px'fontsize='5px'>Copyright © 2010 - 2022 Jefit, Inc.<br></br>
+All Rights Reserved.</Text>
 
 </Box>
 
