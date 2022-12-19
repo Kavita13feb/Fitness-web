@@ -56,8 +56,9 @@ import {
             
 
             <Box variant={'link'} as={'a'} href= {'/'}>
-            <Img src="https://www.i2mediagroup.com/wp-content/uploads/2021/05/fitpro-logo.png"
-             w={20}/>
+            <Img src="https://i.ibb.co/CmydZP3/unnamedkavi-removebg-preview.png"
+     
+            w={'100px'}/>
               </Box>
   
             <Flex display={{ base: 'none', md: 'flex' }} ml={10}>

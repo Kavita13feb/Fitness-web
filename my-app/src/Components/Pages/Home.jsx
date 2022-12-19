@@ -6,7 +6,12 @@ import { Button, ButtonGroup  ,Heading} from '@chakra-ui/react'
 import {CheckIcon} from '@chakra-ui/icons'
 import { Grid, GridItem } from '@chakra-ui/react'
 import {BsFillStarFill} from  'react-icons/bs';
-import{FaCrown,FaStarOfLife} from 'react-icons/fa'
+import{FaCrown,FaStarOfLife,FaFacebook,FaInstagram,FaTwitter} from 'react-icons/fa'
+import Slider from "react-slick";
+import React, { Component } from "react";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+
 import {
   List,
   ListItem,
@@ -20,48 +25,87 @@ import {
 import { brands } from '@fortawesome/fontawesome-svg-core'
 // import {MdCheckCircle} from "@chakra-ui/icons"
 export default function Home (){
+
+
+let data =[1,2,3,4,5,6,7,8]
+  var settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    pauseOnHover: true
+  };
+
+
+  
+const getdata=async()=>{
+  let res =await fetch(`http://localhost:8080/posts?category=begainner&_page=${c0}`)
+  
+      let gymdata =await res.json()
+      console.log(gymdata)
+      // let home_decore_div =document.querySelector(".swiper-wrapper");
+      // let fast_div= document.querySelector(".fast_container")
+setData(gymdata)
+  }
     return (
         <div>
           {/* <h1>HomePage</h1>  */}
 
-          <Box bg='rgb(24 79 163)' w='100%' p={4} color='white' h='600px'>
+          <Box bg='rgb(24 79 163)' w='100%' p={4} color='white' h='750px' marginTop='-5px'> 
           <FontAwesomeIcon icon="fa-brands fa-instagram" color="white"/>
-  <Flex>
-  <Box bg='rgb(24 79 163)' w='100%' p={4} color='white' h='600px'>
+          
+          <Flex gap={'20px'}>
+          <Box marginTop='50px' w={'60%'} marginLeft='50px' >
  
-  <Box maxW='100%' color='white' fontSize={'50px'} fontWeight={"bold"} >
-  MANAGE & TRACK
-  <br/>ALL YOUR WORKOUTS
-  <br/>
-  IN ONE PLACE
-  </Box>
+          <Container maxW='600px' color='white' fontWeight={"bold"}   fontSize={'50px'}  marginLeft='-41px' marginBottom={'-9px'}>
+           MANAGE & TRACK  
+         </Container>
+         <Container maxW='600px' color='white' fontWeight={"bold"}   fontSize={'50px'}  marginLeft='0px'marginBottom={'-9px'} >
+           ALL YOUR WORKOUTS  
+         </Container>
+         <Container maxW='600px' color='white' fontWeight={"bold"}   fontSize={'50px'}  marginLeft='-91px'>
+           IN ONE PLACE
+         </Container>
   
-  <Box maxW='100%'  color='white' fontSize={'30px'} fontWeight={"bold"} fontStyle={"italic"}>
-  #1 Popular Workout Tracking Platform
-Stay Strong Together
-  </Box>
-
+       <Container fontStyle={"italic"} marginTop={'20px'} maxW='100%x' color='white' fontWeight={"bold"}   marginLeft='-40px'  fontSize={'30px'}  >
+       #1 Popular Workout Tracking Platform
+         </Container>
+       <Container  maxW='100%'  color='white'fontStyle={"italic"} fontWeight={"bold"}    marginLeft='-170px' fontSize={'30px'}  >
+       Stay Strong Together
+         </Container>
+  
 
 
     <Flex gap={4}>
-        <Box gap={4}>
-        <Img src ='https://www.jefit.com/wp/wp-content/uploads/2021/11/googleplay.png'/>
-        <Img src="https://www.jefit.com/wp/wp-content/uploads/2021/11/appstore.png"
-          mt={4}/>
+        <Box gap={4} marginTop='25px'>
+          <Box as='a' href='https://play.google.com/store/apps/details?id=je.fit&referrer=utm_source%3Demail'><Img  src ='https://www.jefit.com/wp/wp-content/uploads/2021/11/googleplay.png'/></Box>
+          <Box as ='a' href="https://apps.apple.com/app/apple-store/id449810000">        <Img src="https://www.jefit.com/wp/wp-content/uploads/2021/11/appstore.png"
+          mt={4}/></Box>
+        
+
 
           <FontAwesomeIcon icon="fa-brands fa-instagram" color="white"/>
         </Box>
-        <Box>
+        <Box marginTop='25px'>
 <Img src ='https://www.jefit.com/wp/wp-content/uploads/2021/11/qrcode_white.png'/>
         </Box>
     </Flex>
 
+    <Flex gap={6}>
+    <FaInstagram fontSize={'25px'}/>
+
+<FaFacebook fontSize={'25px'}/>
+<FaTwitter  fontSize={'25px'}/>
+    </Flex>
 
   
   </Box>         
-   <Box bg='rgb(24 79 163)' w='100%' p={4} color='white' h='600px'>
+   <Box marginTop={'80px'} w='50%' marginLeft={'10px'} >
  
-  <Img src="https://www.jefit.com/wp/wp-content/uploads/2022/03/website_hero_watch-1536x1280.png"/>
+  <Img src="https://www.jefit.com/wp/wp-content/uploads/2022/03/website_hero_watch-1536x1280.png"
+  w='100%'/>
 </Box>
   </Flex>
   
@@ -69,7 +113,7 @@ Stay Strong Together
 </Box>
 
 
-<Box marginTop={'50px'} w={'100%'} border='1px solid red'>
+<Box marginTop={'50px'} w={'100%'} >
   <Text fontWeight={"bold"} fontSize={'40px'}>
   CONNECT WITH OVER 10 MILLION JEFIT MEMBERS
   </Text>
@@ -80,7 +124,25 @@ Stay Strong Together
 
 </Box>
 <Box>
-  slider
+  
+
+    
+  
+    
+        <h2>Pause On Hover</h2>
+        <Slider {...settings}>
+          {
+            data.map((el)=>(
+              <div>
+              <h3>{el}</h3>
+            </div>
+            ))
+          }
+
+
+        </Slider>
+      
+
 </Box>
 <Box>
 <Stack direction='row' spacing={4} align='center' justifyContent={'center'}>
@@ -100,9 +162,9 @@ Stay Strong Together
 
 <Box border={'1px solid red '} w='90%' margin={'auto'}>
   <Flex >
-    <Box border={'1px solid red '} w='50%'>
+    <Box border={'1px solid red '} w='40%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web1-1536x1536.png' 
-      w='80%'
+      w='100%'
       />
     </Box>
     <Box border={'1px solid red '} w='50%'>
