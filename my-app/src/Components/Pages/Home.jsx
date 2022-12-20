@@ -123,7 +123,7 @@ setData(gymdata)
 </Box>
 
 
-<Box marginTop={'50px'} w={'100%'} >
+<Box padding={'50px 10px 10px 50px'} w={'100%'} bg='#F8FBFE' >
   <Text fontWeight={"bold"} fontSize={'40px'}>
   CONNECT WITH OVER 10 MILLION JEFIT MEMBERS
   </Text>
@@ -133,13 +133,13 @@ setData(gymdata)
   </Text>
 
 </Box>
-<Box w='90%' margin='auto'>
+<Box w='100%' padding={'50px 40px 40px 60px'} bg='#F8FBFE' >
   
 <Slider {...settings} >
           {
             data.map((el)=>(
               <div key={el.id}>
-             <Img src={el.image}/>
+             <Img src={el.image} w='80%' borderRadius={'10px'}/>
             </div>
             ))
           }
@@ -150,7 +150,7 @@ setData(gymdata)
       
 
 </Box>
-<Box marginTop='30px'>
+<Box marginTop='30px' bg='#F8FBFE'>
 <Stack direction='row' spacing={4} align='center' justifyContent={'center'}>
 
 <Button colorScheme='teal' variant='outline' bg={'#39B7FF'} borderRadius='20px' p={'0px 70px 0px 70px'} fontSize={'25px'} 
@@ -166,8 +166,8 @@ setData(gymdata)
 
 
 
-<Box w='100%' padding={'100px 10px 150px 10px'} h='600px' bg='#F8FBFE'>
-  <Heading marginTop={'30px'} marginBottom={'80px'}>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
+<Box w='100%' padding={'100px 10px 180px 10px'} h='950px' bg='#F7F9FD' >
+  <Heading marginTop={'20px'} marginBottom={'80px'}>JEFIT COVERS ALL OF YOUR WORKOUT NEEDS</Heading>
   <Flex >
     <Box w='50%'>
       <Img src ='https://www.jefit.com/wp/wp-content/uploads/2022/08/web1-1536x1536.png' 
@@ -222,7 +222,7 @@ setData(gymdata)
 
 
 
-<Box w='100%' padding={'200px 10px 10px 10px'} bg='#F8FBFE'>
+<Box w='100%' padding={'140px 10px 10px 10px'} height='800px' bg='#F8FBFE' >
   <Flex gap={'10%'}>
    
     <Box  w='40%' marginTop='80px'>
@@ -417,7 +417,7 @@ More...</Container>
 </Button>
 <Container fontSize ='20px'marginTop='20px'>Save 55%, $69.99 billed / year</Container>
   </GridItem>
-  
+
 
 </Grid>
 </Box>

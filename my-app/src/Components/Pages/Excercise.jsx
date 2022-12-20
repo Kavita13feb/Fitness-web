@@ -52,7 +52,7 @@ useEffect(()=>{
 // },[])
 
 const getdata=async()=>{
-    let res =await fetch(`http://localhost:8080/posts?category=home&_page=${c0}`)
+    let res =await fetch(`http://localhost:8080/posts?Category=Maintaining&_page=${c0}`)
     
         let gymdata =await res.json()
         console.log(gymdata)
@@ -61,33 +61,7 @@ const getdata=async()=>{
   setData(gymdata)
     }
   
-    
-// let id;
-// const getdata=async(page)=>{
-// let res =await fetch(`  http://localhost:8080/posts?category=begainner&_page=${page}&_limit=3`)
-
-//     let gymdata =await res.json()
-//     console.log(gymdata)
-//     setData(gymdata)
-    // let home_decore_div =document.querySelector(".swiper-wrapper");
-//     let container= document.querySelector(".carousal_container")
-//    container.innerHTML="";
-    // let image=document.createElement("img")
-
-    // image.src=data[0].Image
- // container.append(image)
-
-
-//   console.log(page)
    
-    // id=setInterval(function(){
-    //     if(page===total){
-    //         setPage(1) 
-    //  }else{
-    //     setPage(page+1)
-    //  }
-            
-    // },50000)
   
 
 
@@ -95,103 +69,68 @@ const getdata=async()=>{
 
     return (
         <div>
-           <Heading>JEFIT Workout Routine Database
+           <Heading  marginTop={'50px'}>JEFIT Workout Routine Database
 </Heading> 
 
-<Heading>Featured Workout plans</Heading>
-<Heading>Try one of these professionally designed workout plans</Heading>
+<Heading marginTop={'30px'}>Featured Workout plans</Heading>
+<Heading  marginTop={'30px'} fontSize='25px' color={'gray '} marginBottom='50px'>Try one of these professionally designed workout plans</Heading>
 
-<Box w='90%' margin={'auto'}>
+<Box w='100%' padding={'50px 40px 40px 80px'}>
 
 
         <Slider {...settings}   >
 
             {
-                data.map((el)=>(
-                    <GridItem key={el.id}  h='290px' boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} borderRadius='20px' >
-                     <Img src ={el.image} w='100%'  borderTopRadius={'20px'} marginBottom='20px'/>
-        <Heading marginTop={'30px'} fontSize={'20px'}>{el.title}</Heading>
-                  </GridItem>
-                ))
-            }
+                
 
-          {/* <div bg='blue' border='1px solid red'>
-            <h3  border='1px solid red' >2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div>
-          <div>
-            <h3>5</h3>
-          </div>
-          <div>
-            <h3>6</h3>
-          </div> */}
+                  data.map((el)=>(
+                    <div key={el.id}  boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}  >
+
+                   <Img w='80%' src={el.image} borderRadius={'10px'}/>
+                   <Heading marginTop={'30px'} marginLeft='-40px'fontSize={'22px'}>{el.title}</Heading>
+                
+
+                  </div>
+                  ))
+                   
+                  
+            }
         </Slider>
   
       </Box>
-{/* <Grid templateColumns='repeat(3, 1fr)' gap={6} margin='auto' w='90%'>
+
+      <Box w='100%' padding={'50px 40px 40px 80px'} >
+
+
+<Slider {...settings}   >
 
     {
-data.map((el)=>(
-    <GridItem key={el.id} w='90%' h='250px' boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} borderRadius='20px' >
+        
 
-        <Img src ={el.image} w='100%' marginTop={'1px'}  borderTopRadius={'20px'} marginBottom='20px'/>
-        <Heading fontSize={'20px'}>{el.title}</Heading>
-    </GridItem> 
-    ))
+          data.map((el)=>(
+            <div key={el.id}  boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'}  >
+
+           <Img w='80%' src={el.image} borderRadius={'10px'}/>
+           <Heading marginTop={'30px'} marginLeft='-40px'fontSize={'22px'}>{el.title}</Heading>
+        
+
+          </div>
+          ))
+           
+          
     }
+</Slider>
 
-  
-</Grid>
-<GrFormPrevious fontSize={'30px'} 
+</Box>
 
-position={'absolute'} 
-top={'0'} 
-left={'0'}
-width={'8vw'}
-height= '100%'
 
-zIndex='9'
-// cursor= 'pointer'
-display= 'flex'
-alignItems='center'
-justifyContent= 'center'
-color='#f98d29'  */}
-{/* // font-size= '15px' */}
-{/* // scroll-behavior='smooth' */}
-{/* /> */}
-{/* <GrFormNext fontSize={'30px'}/> */}
-
-{/* 2 */}
-
-{/* <Box marginTop={'10px'}>
-<Grid templateColumns='repeat(3, 1fr)' gap={6} margin='auto' w='90%' >
-
-    {
-data.map((el)=>(
-    <GridItem key={el.id} w='90%' h='250px' boxShadow={'rgba(0, 0, 0, 0.24) 0px 3px 8px'} borderRadius='20px' >
-
-        <Img src ={el.image} w='100%' marginTop={'1px'}  borderTopRadius={'20px'} marginBottom='20px'/>
-        <Heading fontSize={'20px'}>{el.title}</Heading>
-    </GridItem> 
-    ))
-    }
-
-  
-</Grid> */}
-
-{/* </Box> */}
 {/* 3 */}
-<Heading>Jefit Workout plans
+<Heading marginTop={'50px'}>Jefit Workout plans
 </Heading> 
 
-<Heading>Filter results down to your specific needs and find a new plan</Heading>
+<Heading  marginTop={'30px'} color='gray' fontSize={'28px'} >Filter results down to your specific needs and find a new plan</Heading>
 
-<Box  w='90%' margin={'auto'}>
+<Box  Box w='100%' border='1px solid red'>
 <RadioGroup onChange={setValue} value={value}  >
       <Stack direction='row' gap={10}>
         <Radio value='1'>Male</Radio>
