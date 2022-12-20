@@ -12,6 +12,17 @@ import Slider from "react-slick";
 import React, { Component } from "react";
 // import "slick-carousel/slick/slick.css" ;
 // import "slick-carousel/slick/slick-theme.css";
+import Footer from '../Footer';
+import {
+  List,
+  ListItem,
+  ListIcon,
+  OrderedList,
+  UnorderedList,
+  Flex,
+  
+
+} from '@chakra-ui/react'
 import {
     Table,
     Thead,
@@ -41,24 +52,42 @@ const [data,setData]=useState([])
 const[page,setPage]=useState(1)
 const[total,setTotal]=useState(1)
 const [value, setValue] = useState(1)
+const [category,setCategory]=useState('Maintaining')
+const [tableData ,setTabledata]=useState([])
 
 let c0=1
 useEffect(()=>{
-    getdata()
+    getdata(category)
 },[])
 
-// useEffect(()=>{
-//     gettotaldata()
-// },[])
+
 
 const getdata=async()=>{
     let res =await fetch(`http://localhost:8080/posts?Category=Maintaining&_page=${c0}`)
     
         let gymdata =await res.json()
         console.log(gymdata)
-        // let home_decore_div =document.querySelector(".swiper-wrapper");
-        // let fast_div= document.querySelector(".fast_container")
+     
   setData(gymdata)
+  
+    }
+
+    
+
+useEffect(()=>{
+    getdataforTale(category)
+},[category])
+
+
+
+const getdataforTale=async()=>{
+    let res =await fetch(`http://localhost:8080/posts?Category=${category}&_page=${c0}`)
+    
+        let gymdata =await res.json()
+        console.log(gymdata)
+     
+        setTabledata(gymdata)
+  
     }
   
    
@@ -130,7 +159,7 @@ const getdata=async()=>{
 
 <Heading  marginTop={'30px'} color='gray' fontSize={'28px'} >Filter results down to your specific needs and find a new plan</Heading>
 
-<Box  Box w='100%' border='1px solid red'>
+<Box  Box w='90%' paddingLeft={'30px'} marginLeft={'80px'} marginTop={'30px'} >
 <RadioGroup onChange={setValue} value={value}  >
       <Stack direction='row' gap={10}>
         <Radio value='1'>Male</Radio>
@@ -188,6 +217,71 @@ const getdata=async()=>{
 
 </Box>
 
+
+
+<Box paddingTop='60px'marginBottom={'50px'} >
+<Grid w='90%' margin={'auto'} templateColumns='repeat(4, 1fr)' gap={6}>
+  <GridItem w='100%'  >
+    <Heading fontSize={'25px'} marginBottom='30px'>All Categories:</Heading>
+    <List>
+  <ListItem _hover={{
+    fontWeight:"bold",
+ cursor:'pointer',
+  transition:'all .3s ease',
+  transform:'translateX(-10px)',
+  opacity:'100%',
+
+
+  }}
+  onClick={(e)=>setCategory(e.target.innerText)}
+  >Maintaining</ListItem>
+  <ListItem 
+  ListItem _hover={{
+    fontWeight:"bold",
+ cursor:'pointer',
+  transition:'all .3s ease',
+  transform:'translateX(-10px)',
+  opacity:'100%',
+
+
+  }}
+  onClick={(e)=>setCategory(e.target.innerText)} >Bulking</ListItem>
+  <ListItem >Cutting</ListItem>
+  <ListItem >
+Sport</ListItem>
+</List>
+  </GridItem>
+  <GridItem w='100%'  >
+
+  <Heading fontSize={'25px'} marginBottom='20px'>Sort by:</Heading>
+    <List>
+
+  <ListItem >Latest</ListItem>
+  <ListItem >Most Popular</ListItem>
+  <ListItem >Most Downloaded</ListItem>
+</List>
+  </GridItem>
+  <GridItem w='100%'  >
+    <Heading fontSize={'25px'}  marginBottom='30px'>Exp. Level:</Heading>
+    <List >
+ 
+  <ListItem >Beginner</ListItem>
+  <ListItem>Intermediate</ListItem>
+  <ListItem>Advanced</ListItem>
+</List>
+  </GridItem>
+  <GridItem w='100%'  >
+    <Heading fontSize={'25px'}  marginBottom='30px'>Type:</Heading>
+    <List>
+ 
+  <ListItem > Featured</ListItem>
+  <ListItem > Elite</ListItem>
+  <ListItem > Free</ListItem>
+</List>
+  </GridItem>
+</Grid>
+</Box>
+
 <Box w='90%' margin={'auto'}>
 <TableContainer>
   <Table variant='striped' colorScheme='teal'>
@@ -207,15 +301,15 @@ const getdata=async()=>{
     </Thead>
     <Tbody>
 {
-    data.map((el)=>(
+    tableData.map((el)=>(
         <Tr>
-        <Td>{el.title}</Td>
+        <Td color={'blue'} fontWeight='bold'> <Flex gap={'10px'} alignItems='center'><Img w='25%'src={el.image}/>{el.title} </Flex></Td>
         <Td>{el.Frequency}</Td>
         <Td >{el.Category}</Td>
         
         <Td>{el.Difficulty}</Td>
         <Td>{el.Views}</Td>
-        <Td>{el.Created }</Td>
+        <Td color={'blue'} fontWeight='bold'>{el.Created }</Td>
         <Td>{el.status}</Td>
       </Tr>
     ))
@@ -228,7 +322,7 @@ const getdata=async()=>{
 </TableContainer>
 </Box>
 
-
+<Footer/>
 
 </div> 
 )
