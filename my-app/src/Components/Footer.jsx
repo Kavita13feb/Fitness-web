@@ -16,7 +16,7 @@ export default function Footer(){
 
     return (
         <Box bg='pink.50' paddingTop='60px' >
-        <Grid w='90%' margin={'auto'} templateColumns='repeat(4, 1fr)' gap={6}>
+        <Grid w='90%' margin={'auto'} templateColumns={{lg:"repeat(4, 1fr)",sm:"repeat(1, 1fr)"}} gap={6}>
           <GridItem w='100%'  >
             <Heading fontSize={'25px'} marginBottom='30px'>Products</Heading>
             <List>

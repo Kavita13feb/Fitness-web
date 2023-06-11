@@ -1,0 +1,124 @@
+{
+    "posts": [
+      {
+        "id": 1,
+        "title": "Dynamic Bodyweight Burner",
+        "image": "https://cdn.jefit.com/uc/file/88ae4f6923a223a7/1.jpg",
+        "Frequency": "2 days ",
+        "Category":"Maintaining",
+        "Difficulty":"Beginner",
+        "Views":"2/0",
+        "Created" : "zdmxcpms",
+        "status":"Free"
+      },
+      {
+        "id": 5,
+        "title": "Dynamic Bodyweight Burner",
+        "image": "https://cdn.jefit.com/uc/file/88ae4f6923a223a7/1.jpg",
+        "Frequency": "2 days ",
+        "Category":"Maintaining",
+        "Difficulty":"Beginner",
+        "Views":"2/0",
+        "Created" : "zdmxcpms",
+        "status":"Free"
+      },
+      {
+        "id": 6,
+        "title": "Dynamic Bodyweight Burner",
+        "image": "https://cdn.jefit.com/uc/file/88ae4f6923a223a7/1.jpg",
+        "Frequency": "2 days ",
+        "Category":"Maintaining",
+        "Difficulty":"Beginner",
+        "Views":"2/0",
+        "Created" : "zdmxcpms",
+        "status":"Free"
+      },
+      {
+        "id": 2,
+        "title": "",
+        "Frequency": "",
+        "image": "https://www.jefit.com/wp/wp-content/uploads/2021/11/20members-150x150.png.webp",
+        "Category":"home",
+        "Exp-Level":"",
+        "Views":"",
+        "Created" : "",
+        "status":""
+      },
+      {
+        "id": 3,
+        "title": "",
+        "Frequency": "",
+        "image" : "https://www.jefit.com/wp/wp-content/uploads/2021/11/3members-150x150.png.webp",
+        "Category":"home",
+        "Exp. Level":"",
+        "Views/Downloads":"",
+        "Created " : "",
+        "Elite/Free":""
+      },
+      {
+        "id": 11,
+        "title": "",
+        "Frequency": "",
+        "image" : "https://www.jefit.com/wp/wp-content/uploads/2021/11/18members-150x150.png.webp",
+        "Category":"home",
+        "Exp. Level":"",
+        "Views/Downloads":"",
+        "Created " : "",
+        "Elite/Free":""
+      },
+      {
+        "id":12 ,
+        "title": "",
+        "Frequency": "",
+        "image" : "https://www.jefit.com/wp/wp-content/uploads/2021/11/14members-150x150.png.webp",
+        "Category":"home",
+        "Exp. Level":"",
+        "Views/Downloads":"",
+        "Created " : "",
+        "Elite/Free":""
+      },
+      {
+        "id": 13,
+        "title": "",
+        "Frequency": "",
+        "image" : "https://www.jefit.com/wp/wp-content/uploads/2021/11/17members-150x150.png.webp",
+        "Category":"home",
+        "Exp. Level":"",
+        "Views/Downloads":"",
+        "Created " : "",
+        "Elite/Free":""
+      },
+      {
+        "id": 23,
+        "title": "",
+        "Frequency": "",
+        "image" : "https://www.jefit.com/wp/wp-content/uploads/2021/11/7members-150x150.png.webp",
+        "Category":"home",
+        "Exp. Level":"",
+        "Views/Downloads":"",
+        "Created " : "",
+        "Elite/Free":""
+      },
+      {
+        "id": 43,
+        "title": "",
+        "Frequency": "",
+        "image" : "https://www.jefit.com/wp/wp-content/uploads/2021/11/2members-150x150.png.webp",
+        "Category":"home",
+        "Exp. Level":"",
+        "Views/Downloads":"",
+        "Created " : "",
+        "Elite/Free":""
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
